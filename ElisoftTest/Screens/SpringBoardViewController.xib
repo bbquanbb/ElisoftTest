@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpringBoardViewController" customModule="ElisoftTest" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="CVp-ad-vc4" id="OLs-GK-Hg7"/>
+                <outlet property="pageControl" destination="Sou-Vg-zto" id="zPI-MM-Ff8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="CVp-ad-vc4">
+                    <rect key="frame" x="0.0" y="59" width="393" height="723"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zG6-wn-AFb">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Sou-Vg-zto">
+                    <rect key="frame" x="0.0" y="782" width="393" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="CcV-EF-LlP"/>
+                    </constraints>
+                </pageControl>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="CVp-ad-vc4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0m5-7r-2ke"/>
+                <constraint firstItem="Sou-Vg-zto" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9bf-lU-RLI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Sou-Vg-zto" secondAttribute="bottom" constant="10" id="Ieb-2K-EaD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Sou-Vg-zto" secondAttribute="trailing" id="SEM-HP-rrT"/>
+                <constraint firstItem="CVp-ad-vc4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="U84-UF-X7J"/>
+                <constraint firstItem="Sou-Vg-zto" firstAttribute="top" secondItem="CVp-ad-vc4" secondAttribute="bottom" id="hXo-3b-kDi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CVp-ad-vc4" secondAttribute="trailing" id="n9Z-l0-W9h"/>
+            </constraints>
+            <point key="canvasLocation" x="45.038167938931295" y="20.422535211267608"/>
+        </view>
+    </objects>
+</document>

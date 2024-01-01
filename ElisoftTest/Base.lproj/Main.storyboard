@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ElisoftTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="elisoftLogo" translatesAutoresizingMaskIntoConstraints="NO" id="cvW-5S-qjj">
+                                <rect key="frame" x="40" y="159" width="313" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="fJh-9T-R0m"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCw-q7-dpX">
+                                <rect key="frame" x="166.66666666666666" y="720.66666666666663" width="59.666666666666657" height="59.666666666666629"/>
+                                <color key="backgroundColor" red="0.38823530080000002" green="0.074509806930000005" blue="0.043137259779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NCw-q7-dpX" secondAttribute="height" multiplier="1:1" id="oFG-Qp-fle"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tck-QJ-YS5">
+                                <rect key="frame" x="179" y="735" width="35" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="ZRV-DU-KiJ"/>
+                                    <constraint firstAttribute="width" secondItem="tck-QJ-YS5" secondAttribute="height" multiplier="1:1" id="oko-q9-BM9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NCw-q7-dpX" firstAttribute="height" secondItem="tck-QJ-YS5" secondAttribute="height" multiplier="1.7" id="FVN-3O-hkv"/>
+                            <constraint firstItem="tck-QJ-YS5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GKW-5i-XHl"/>
+                            <constraint firstItem="NCw-q7-dpX" firstAttribute="centerX" secondItem="tck-QJ-YS5" secondAttribute="centerX" id="MV9-d9-94X"/>
+                            <constraint firstItem="cvW-5S-qjj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="OmB-td-Z9b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tck-QJ-YS5" secondAttribute="bottom" constant="50" id="S0E-Ef-g8O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cvW-5S-qjj" secondAttribute="trailing" constant="40" id="Y7O-4C-0S4"/>
+                            <constraint firstItem="NCw-q7-dpX" firstAttribute="centerY" secondItem="tck-QJ-YS5" secondAttribute="centerY" id="ezV-4h-O37"/>
+                            <constraint firstItem="cvW-5S-qjj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="gHL-Qh-V2f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appLogo" destination="cvW-5S-qjj" id="4c2-7q-1YX"/>
+                        <outlet property="playButton" destination="tck-QJ-YS5" id="s0m-7w-Egb"/>
+                        <outlet property="pulseView" destination="NCw-q7-dpX" id="ar1-DG-o23"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45.038167938931295" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="elisoftLogo" width="1000" height="657"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+    </resources>
+</document>
