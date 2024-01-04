@@ -25,6 +25,7 @@ class SpringBoardCollectionViewCell: UICollectionViewCell {
     }
     
     private func loadImage() {
+        imageView.sd_cancelCurrentImageLoad()
         imageView.sd_setImage(with: URL(string: imgPath), placeholderImage: nil)
     }
 }

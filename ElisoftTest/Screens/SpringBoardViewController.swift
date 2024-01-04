@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class SpringBoardViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
@@ -49,7 +50,15 @@ class SpringBoardViewController: UIViewController {
             self.pageControl.currentPage = 0
             let itemPerPage: Int = self.numberOfRows * self.numberOfColumns
             self.boardDatasource = self.generateBoardDatasource(listTotalData: viewModel.listImgPath, itemsPerSubArray: itemPerPage)
-            self.collectionView.scrollsToTop = true
+            self.resetCollectionView()
+        }
+    }
+    
+    private func resetCollectionView() {
+        self.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .left, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            SDImageCache.shared.clearMemory()
+            SDWebImageManager.shared.cancelAll()
             self.collectionView.reloadData()
         }
     }
