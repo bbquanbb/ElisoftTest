@@ -55,12 +55,10 @@ class SpringBoardViewController: UIViewController {
     }
     
     private func resetCollectionView() {
+        SDImageCache.shared.clearMemory()
+        SDWebImageManager.shared.cancelAll()
+        self.collectionView.reloadData()
         self.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .left, animated: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            SDImageCache.shared.clearMemory()
-            SDWebImageManager.shared.cancelAll()
-            self.collectionView.reloadData()
-        }
     }
     
     private func addActionButtons() {
